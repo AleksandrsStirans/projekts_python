@@ -3,6 +3,9 @@
 ## Kā Tas Darbojas
 ### Telegram Bota iestatīšana:
 Izveidojiet jaunu Telegram botu un iegūstiet bot token.
+> Ttelegramā sāciet dialogu ar BotFather, ierakstiet /newbot, pēc tam piešķiriet savam robotam vārdu, pēc tam
+ ierakstiet komandu /token un atlasiet savu botu, lai saņemtu tokenu.
+> Ierakstiet tokenu 10. rindā pēdiņās.
 ### Akreditācijas faila izveide:
 Ievietojiet failā ar nosaukumu data.txt Ortus pieteikšanās akreditāciju šādā formātā:
 ```

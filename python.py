@@ -6,14 +6,14 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import telebot
 
-# Токен вашего бота
+# Bot token
 bot_token = '6410884762:AAHdIxXaJtvkYwAjR48hPHB5Wrc5KivQy3c'
 bot = telebot.TeleBot(bot_token)
 
-# Функция, которая выполняет ваш код при команде /start
+# /start function
 @bot.message_handler(commands=['start'])
 def start(message):
-    # Весь ваш код здесь
+    # credentials 
     credentials_file_path = 'data.txt'
 
     with open(credentials_file_path, 'r') as file:
@@ -21,12 +21,12 @@ def start(message):
         email = lines[0].strip()
         password = lines[1].strip()
 
-    # Создание опций для включения headless mode
+    # enable headless mode
     chrome_options = Options()
     chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-gpu')  # Добавлено для устранения проблемы с отображением окна браузера
+    chrome_options.add_argument('--disable-gpu')  # Added to fix an issue with displaying the browser window
 
-    # Использование опций при создании объекта WebDriver
+    # Using Options When Creating a WebDriver Object
     driver = webdriver.Chrome(options=chrome_options)
 
     driver.get("https://id2.rtu.lv/openam/UI/Login?module=LDAP&locale=lv")
@@ -63,16 +63,20 @@ def start(message):
         # Check if the elements are present before accessing their attributes
         course_element = item.find('small', class_='text-muted')
         activity_element = item.find('h6')
+        
+        homework_link_element = item.find('div', class_='text-truncate line-height-3 media-body')
+        if homework_link_element:
+            homework_link_element = homework_link_element.find('a', href=True)
 
         if course_element and activity_element:
             course_name = course_element.text.strip()
-            activity_title = activity_element.text.strip()
-            message_text = f"Course: {course_name}\nActivity Title: {activity_title}\n"
-            # Отправляем сообщение боту
+            activity_title = "\n".join(activity_element.stripped_strings)
+            homework_link = homework_link_element['href'] if homework_link_element else "No link available"
+            
+            message_text = f"Course: {course_name}\nActivity Title: {activity_title}: {homework_link}\n"
+            # Send a message to the bot
             bot.send_message(message.chat.id, message_text)
-
-    # Close the browser
     driver.quit()
 
-# Запуск бота
+# Bot starting  
 bot.polling()

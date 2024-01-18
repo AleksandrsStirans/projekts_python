@@ -13,10 +13,12 @@ Lietotājvārds
 jūsu_parole
 ```
 ## Atkarību Instalēšana:
+Ievādiet teemināla doto programmas kodu bibliotēkas instalēšanai.
 ```
 pip install -r requirements.txt
 ```
 ## Koda Izpilde:
+Palaidiet programmu, uzrakstot terminālā:
 ```
 python python.py
 ```

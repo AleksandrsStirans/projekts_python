@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import telebot
 
 # Bot token
-bot_token = '6410884762:AAHdIxXaJtvkYwAjR48hPHB5Wrc5KivQy3c'
+bot_token = 'input your token here'
 bot = telebot.TeleBot(bot_token)
 
 # /start function

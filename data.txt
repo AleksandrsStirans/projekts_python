@@ -1,2 +1,2 @@
-Aleksandrs.Stirans
-Monkrus007_
+*login
+*password

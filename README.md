@@ -11,8 +11,7 @@ jūsu_parole
 ```
 ## Atkarību Instalēšana:
 ```
-Lietotājvārds
-jūsu_parole
+pip install -r requirements.txt
 ```
 ## Koda Izpilde:
 ```

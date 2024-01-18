@@ -31,3 +31,7 @@ Skripts nolasa Ortus pieteikšanās akreditāciju no data.txt faila.
 Tam tiek izmantots bezgalvains Chrome mājasdarbu iegūšanai, padarot procesu neredzamu lietotājam.
 Izmantojot BeautifulSoup, tiek izanalizēts lapas kods, lai izgūtu informāciju par mājasdarbiem.
 Par katru mājasdarbu tiek sūtīts Telegram ziņojums, lai informētu lietotāju.
+
+## Programmas izpildes demonstrēšana
+Noklikšķinot uz tālāk esošās saites, jūs varat redzēt programmu darbībā
+Links: https://drive.google.com/file/d/1jGZbJoF2KgWhKtQxEaNgI_zDJ-270cUf/view?usp=drive_link

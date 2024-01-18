@@ -22,7 +22,7 @@ Pēc tam nosūtam /start komandu savam Telegram botam.
 1) Izmantojot selenium bibliotēku skripts automatizē Ortus ieejas procesu, izmantojot sniegtos datus.
 2) Tas navigē uz sadaļu 'Studentiem', un pēc tam uz saiti 'estudijas.rtu.lv'.
 3) Izmantojot bibliotēku BeautifulSoup, tas izvelk informāciju par pašreizējiem mājasdarbiem.
-4) Katram mājasdarbam tiek nosūtīts Telegram ziņojums ar kursa nosaukumu un aktivitātes virsrakstu un linku.
+4) Katram mājasdarbam tiek nosūtīts Telegram ziņojums ar kursa nosaukumu un aktivitātes virsrakstu un linku, izmantojot telebot library.
 ## Koda Izskaidrojums
 Skripts izmanto Selenium, lai automatizētu tīmekļa mijiedarbību ar Ortus.
 Telebot tiek izmantots, lai mijiedarbotos ar Telegram.

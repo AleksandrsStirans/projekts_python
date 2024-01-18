@@ -10,8 +10,11 @@ Lietotājvārds
 jūsu_parole
 ```
 ## Atkarību Instalēšana:
-
 ```
 Lietotājvārds
 jūsu_parole
+```
+## Koda Izpilde:
+```
+python python.py
 ```
